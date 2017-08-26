@@ -1,0 +1,80 @@
+<link rel="import" href="../wired-lib/wired-lib.html">
+
+<dom-module id="wired-button">
+  <template>
+    <style>
+       :host {
+        display: inline-block;
+        font-family: inherit;
+        cursor: pointer;
+        padding: 8px 10px;
+        position: relative;
+        text-align: center;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+      }
+
+      svg {
+        display: block;
+      }
+
+      path {
+        stroke: currentColor;
+        stroke-width: 0.7;
+        fill: transparent;
+      }
+    </style>
+    <span>{{text}}</span>
+    <div class="overlay">
+      <svg id="svg">
+      </svg>
+    </div>
+  </template>
+
+  <script>
+    class WiredButton extends Polymer.Element {
+      static get is() { return 'wired-button'; }
+      static get properties() {
+        return {
+          text: {
+            type: String,
+            observer: 'relayout'
+          }
+        };
+      }
+
+      connectedCallback() {
+        super.connectedCallback();
+        this.style.opacity = 0;
+        Polymer.RenderStatus.beforeNextRender(this, () => {
+          setTimeout(() => {
+            this.relayout();
+            this.style.opacity = 1;
+          }, 150);
+        });
+      }
+
+      _clearNode(node) {
+        while (node.hasChildNodes()) {
+          node.removeChild(node.lastChild);
+        }
+      }
+
+      relayout() {
+        this._clearNode(this.$.svg);
+        var s = this.getBoundingClientRect();
+        this.$.svg.setAttribute("width", s.width);
+        this.$.svg.setAttribute("height", s.height);
+        _WIRES_.rectangle(this.$.svg, 0, 0, s.width, s.height);
+      }
+    }
+    window.customElements.define(WiredButton.is, WiredButton);
+  </script>
+</dom-module>
