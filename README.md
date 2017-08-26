@@ -8,6 +8,7 @@ Hand drawn Button component
 ```
 <custom-element-demo>
   <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="wired-button.html">
     <style is="custom-style">
       .blue {
