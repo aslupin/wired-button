@@ -20,6 +20,13 @@
         transform: scale(0.97) translate(1.5%, 1.5%);
       }
 
+       :host(.disabled) {
+        opacity: 0.6 !important;
+        background: rgba(0, 0, 0, 0.07);
+        cursor: default;
+        pointer-events: none;
+      }
+
       .overlay {
         position: absolute;
         top: 0;
@@ -60,6 +67,11 @@
             type: Number,
             value: 1,
             observer: '_relayout'
+          },
+          disabled: {
+            type: Boolean,
+            value: false,
+            observer: '_onDisableChange'
           }
         };
       }
@@ -84,6 +96,14 @@
       _clearNode(node) {
         while (node.hasChildNodes()) {
           node.removeChild(node.lastChild);
+        }
+      }
+
+      _onDisableChange() {
+        if (this.disabled) {
+          this.classList.add("disabled");
+        } else {
+          this.classList.remove("disabled");
         }
       }
 
