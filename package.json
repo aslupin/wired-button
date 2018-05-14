@@ -1,5 +1,5 @@
 {
-  "name": "@wired/button",
+  "name": "wired-button",
   "version": "0.5.0",
   "description": "Hand-drawn sketchy button - web component",
   "main": "wired-button.js",
