@@ -13,6 +13,7 @@ export class WiredButton extends LitElement {
     super();
     this.elevation = 1;
     this.disabled = false;
+    this.classList.add('pending');
   }
 
   _createRoot() {
@@ -39,6 +40,10 @@ export class WiredButton extends LitElement {
         text-align: center;
         display: inline-flex;
         outline: none;
+      }
+    
+      :host(.pending) {
+        opacity: 0;
       }
     
       :host(:active) path {
@@ -108,6 +113,7 @@ export class WiredButton extends LitElement {
       (wired.line(svg, (i * 2), s.height + (i * 2), s.width + (i * 2), s.height + (i * 2))).style.opacity = (75 - (i * 10)) / 100;
       (wired.line(svg, s.width + (i * 2), s.height + (i * 2), s.width + (i * 2), i * 2)).style.opacity = (75 - (i * 10)) / 100;
     }
+    this.classList.remove('pending');
   }
 }
 
