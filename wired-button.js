@@ -100,6 +100,7 @@ export class WiredButton extends LitElement {
 
   _didRender() {
     const svg = this.shadowRoot.getElementById('svg');
+    this._clearNode(svg);
     const s = this.getBoundingClientRect();
     const elev = Math.min(Math.max(1, this.elevation), 5);
     const w = s.width + ((elev - 1) * 2);
