@@ -1,9 +1,11 @@
 ![wired buttons](https://wiredjs.github.io/wired-elements/images/buttons.png)
 
 # wired-button
-Hand-drawn sketchy Button [web component](https://www.webcomponents.org/introduction).
+Hand-drawn sketchy Button web component.
 
-Full set of such controls at [wiredjs.com](http://wiredjs.com/)
+For demo and view the complete set of wired-elememts: [wiredjs.com](http://wiredjs.com/)
+
+Learn about web components [here]([web component](https://www.webcomponents.org/introduction).
 
 ## Usage
 
