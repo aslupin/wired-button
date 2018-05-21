@@ -28,3 +28,9 @@ Use it in your web page:
 <wired-button disabled="">Disabled</wired-button>
 <wired-button elevation="3">Elevation</wired-button>
 ```
+
+## Properties
+
+**elevation** - Number between  1 and 5 (inclusive) that gives the button a sketchy height. Default value is 1.
+
+**disabled** - disables the button. Default value is false. 
