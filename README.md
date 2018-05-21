@@ -5,7 +5,7 @@ Hand-drawn sketchy Button web component.
 
 For demo and view the complete set of wired-elememts: [wiredjs.com](http://wiredjs.com/)
 
-Learn about web components [here]([web component](https://www.webcomponents.org/introduction).
+Learn about web components [here](https://www.webcomponents.org/introduction).
 
 ## Usage
 
