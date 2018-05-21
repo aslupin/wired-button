@@ -25,11 +25,11 @@ import { WiredButton } from "wired-button"
 Use it in your web page:
 ```html
 <wired-button>Click Me</wired-button>
-<wired-button disabled="">Disabled</wired-button>
+<wired-button disabled>Disabled</wired-button>
 <wired-button elevation="3">Elevation</wired-button>
 ```
 
-## Properties
+### Properties
 
 **elevation** - Number between  1 and 5 (inclusive) that gives the button a sketchy height. Default value is 1.
 
