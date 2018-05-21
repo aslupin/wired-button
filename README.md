@@ -1,3 +1,5 @@
+![wired buttons](https://wiredjs.github.io/wired-elements/images/buttons.png)
+
 # wired-button
 Hand-drawn sketchy Button [web component](https://www.webcomponents.org/introduction).
 
@@ -24,5 +26,3 @@ Use it in your web page:
 <wired-button disabled="">Disabled</wired-button>
 <wired-button elevation="3">Elevation</wired-button>
 ```
-
-![wired buttons](https://wiredjs.github.io/wired-elements/images/buttons.png)
