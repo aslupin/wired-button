@@ -98,6 +98,11 @@ export class WiredButton extends LitElement {
     }
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    setTimeout(() => this._didRender());
+  }
+
   _didRender() {
     const svg = this.shadowRoot.getElementById('svg');
     this._clearNode(svg);
