@@ -13,11 +13,13 @@ export class WiredButton extends LitElement {
     super();
     this.elevation = 1;
     this.disabled = false;
-    this.classList.add('pending');
+
   }
 
   _createRoot() {
-    return this.attachShadow({ mode: 'open', delegatesFocus: true });
+    const root = this.attachShadow({ mode: 'open', delegatesFocus: true });
+    this.classList.add('pending');
+    return root;
   }
 
   _render({ text, elevation, disabled }) {
