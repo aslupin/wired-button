@@ -1,3 +1,6 @@
+> ## ⚠️🛠 Project Moved
+> This project has moved to a single monorepo for all wired-elements: [Wired Elements](https://github.com/wiredjs/wired-elements).
+
 ![wired buttons](https://wiredjs.github.io/wired-elements/images/buttons.png)
 
 # wired-button
